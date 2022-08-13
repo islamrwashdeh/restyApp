@@ -1,0 +1,27 @@
+$backgroundColor: #e9f0ef;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $backgroundColor;
+  height: 100%;
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  header {
+    background: #AC7D88;
+    border-bottom: 1px solid rgb(179, 78, 78);
+    color: white;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+}
