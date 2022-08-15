@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './form.scss';
-
+let m =[];
 
  function Form(props) {
    
@@ -23,16 +23,35 @@ import './form.scss';
     let newURL = event.target.value;
     setUrl(newURL);
   }
-  const handleSubmit = event => {
-    event.preventDefault();
-    const formData = {
-      method: method,
-      url: url,
-      body: null
-    };
-    if (body) formData.body = body;
-    props.handleApiCall(formData);
-  }
+//   const handleSubmit = event => {
+//     event.preventDefault();
+//     const formData = {
+//       method: method,
+//       url: url,
+//       body: null
+//     };
+//     if (body) formData.body = body;
+//     props.handleApiCall(formData);
+//   }
+  
+   const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = {
+            method: method,
+            url: url,
+            body: null
+        }
+        if (body) {
+           formData.body = body;
+        }
+        // console.log(formData.method);
+        m.push({url:data.url, method:data.method});
+        props.renderMethod(m)
+        props.handelApi(formData);
+    }
+  
+  
+  
   return (
     <>
       <form onSubmit={handleSubmit}>
