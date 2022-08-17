@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import './form.scss';
-let m =[];
-
- function Form(props) {
-   
+export default function Form(props) {
   const [url, setUrl] = useState();
   const [method, setMethod] = useState('GET');
   const [body, setBody] = useState();
@@ -23,35 +20,16 @@ let m =[];
     let newURL = event.target.value;
     setUrl(newURL);
   }
-//   const handleSubmit = event => {
-//     event.preventDefault();
-//     const formData = {
-//       method: method,
-//       url: url,
-//       body: null
-//     };
-//     if (body) formData.body = body;
-//     props.handleApiCall(formData);
-//   }
-  
-   const handleSubmit = (event) => {
-        event.preventDefault();
-        const formData = {
-            method: method,
-            url: url,
-            body: null
-        }
-        if (body) {
-           formData.body = body;
-        }
-        // console.log(formData.method);
-        m.push({url:data.url, method:data.method});
-        props.renderMethod(m)
-        props.handelApi(formData);
-    }
-  
-  
-  
+  const handleSubmit = event => {
+    event.preventDefault();
+    const formData = {
+      method: method,
+      url: url,
+      body: null
+    };
+    if (body) formData.body = body;
+    props.handleApiCall(formData);
+  }
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -84,5 +62,3 @@ let m =[];
   );
 
 }
-
-export default Form;
