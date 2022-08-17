@@ -1,15 +1,19 @@
-$backgroundColor: #ff68c0;
-$footerfont: Georgia, Serif;
+$backgroundColor: rgb(71, 71, 71);
 .footer {
-    background-color: $backgroundColor;
-    position:sticky;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
+    background: darken($backgroundColor, 10);
+    border-top: 1px solid #eee;
+    padding: 0.2em 3em;
+    display: flex;
+    align-items: center;
+    height: 70px;
+
     footer {
-        background-color: $backgroundColor;
-        text-align: center;
-        font-family: $footerfont;
-        color: rgb(40, 58, 73);
+        text-align: left;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: aliceblue;
+        
     }
 }

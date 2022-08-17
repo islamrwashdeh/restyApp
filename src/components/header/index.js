@@ -1,13 +1,19 @@
-import React from "react";
-import "./header.scss";
+import React from 'react';
+import './header.scss';
 
-function Header() {
+export default function Header() {
   return (
-    <div className="header">
+    <section className='header'>
       <header>
-        <h1>resty App</h1>
+        <h1>RESTY</h1>
       </header>
-    </div>
+      <nav className='navBar' >
+        <ul>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/history'>History</a></li>
+          <li><a href='https://github.com/islamrwashdeh/restyApp'>Github Repo</a></li>
+        </ul>
+      </nav>
+    </section>
   );
 }
-export default Header;

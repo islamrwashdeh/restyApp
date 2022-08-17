@@ -1,35 +1,25 @@
-$scrollcolor: rgb(0, 203, 218);
+section{
+    .divi{
+        display: flex;
+        justify-content: space-around;
+        border-style: groove;
+        border: 2px  ;
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+        color: rgb(58, 48, 48);
+        background-image: url("https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    }
+}
 .box {
     border-style: outset;
-    border: 3px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 9px;
-    width: 50%;
+    width: 60%;
+    height: 300px;
     padding: 10px;
-    margin: auto;
-    overflow: scroll;
-}
-// .center {
-//     margin: auto;
-//     width: 50%;
-//     border: 3px solid green;
-//     padding: 10px;
-//   }
-
-::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-
-::-webkit-scrollbar-track {
-    border: 1px solid $scrollcolor;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: darken($color: $scrollcolor, $amount: 20);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: darken($color: $scrollcolor, $amount: 20);
+    margin: 0 0 0 20%;
+    overflow: auto;
+    
 }
